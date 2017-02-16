@@ -1,0 +1,228 @@
+/*----------------------------*\
+  1. MAIN SETUP
+\*----------------------------*/
+
+$wesbos: #193549;
+$instagram: #517fa4;
+$accent-color: #edc018;
+$text-color: #f7f7f7;
+$card-background: #f7f7f7;
+$secondary-text: #212121;
+$tertiary-text: #757575;
+$button-hover: #ececec;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400|Roboto:200,300,400');
+
+
+html {
+	box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	// this should probably be moved to the landing container
+	background: #517fa4; /* fallback for old browsers */
+/* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, $wesbos, $instagram); 
+          background: linear-gradient(to right, $wesbos, $instagram); 
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+font-family: 'Roboto';  
+}
+
+h1 {
+	font-family: 'Raleway';
+	letter-spacing: 0.3em;
+	margin: 0;
+}
+
+h2 {
+	color: $text-color;
+	font-family: 'Roboto';
+	font-weight: 200;
+	letter-spacing: 0.1em;
+	margin: 0;
+}
+
+h3 {
+	font-family: 'Roboto';
+	font-weight: 200;
+	letter-spacing: 0.1em;
+}
+
+
+
+/*----------------------------*\
+	2. NAVBAR
+\*----------------------------*/
+
+nav {
+	height: 50px;
+	width: 100%;
+}
+
+ul {
+	align-items: center;
+	display: flex;
+	font-size: 20px;
+	height: 100%;
+	justify-content: center;
+	margin: 0;
+	padding: 0 10px;
+}
+
+li {
+	font-family: 'Raleway';
+	list-style:none;
+}
+
+a {
+	text-decoration: none;
+	color: $text-color;
+}
+
+nav .fa {
+	cursor: pointer;
+	color: $accent-color;
+	margin: 0 auto 0 0;
+}
+
+.link {
+	color: $text-color;
+	cursor: pointer;
+	height: 100%;
+	line-height: 50px;
+	margin: 0 5px;
+	padding: 0 2.5px;
+	transition: 0.25s ease;
+}
+
+.link:after {
+	content: '';
+	display: block;
+	height: 3px;
+	margin: auto;
+	position: relative;
+	top: -3px;
+	transition: 0.5s ease;
+	width: 0;
+}
+
+.link:hover:after {
+	width: 100%;
+	background-color: $accent-color;
+}
+
+a:hover {color: $accent-color;}
+
+
+
+
+
+/*----------------------------*\
+	3. LANDING PAGE
+\*----------------------------*/
+
+.landing {
+	color: $text-color;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	text-align: center;
+}
+
+.landing .fa {
+	color: $accent-color;
+}
+
+
+
+
+
+
+/*----------------------------*\
+	4. PROJECTS
+\*----------------------------*/
+.projects > h2 {
+	text-align: center;
+}
+
+.projects {
+  background: $instagram;
+  color: $instagram;
+  height: 100vh;
+  padding: 20px 10%;
+  text-align: center;
+}
+
+.projects > h2 {
+	margin: 1% 0 3% 0;
+}
+
+.project-container {
+	padding: 3%;
+}
+
+.wide-card {
+  background: $card-background;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.5);
+     -moz-box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.5);
+          box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.5);
+  max-width: 512px;
+  min-height: 300px;
+}
+
+.card-splash {
+  align-items: flex-end;
+  background: url('http://rickMcGavin.github.io/Projects/FCC/bobby_fischer/assets/bobby.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 200px;
+  padding: 0 5px;
+}
+
+.card-description {
+  background: $card-background;
+  border-bottom: 1.5px solid rgba(0,0,0, 0.1);
+  color: $tertiary-text;
+  min-height: 60px;
+  padding: 10px;
+  text-align: left;
+}
+
+.card-description .fa-code {
+	color: $instagram;
+	font-weight: bolder;
+}
+
+.card-link {
+  background: $card-background;
+  display: flex;
+  align-items: flex-start;
+  min-height: 50px;
+  padding: 10px;
+}
+
+.card-link > a {
+	background: $card-background;
+	border-radius: 2px;
+	color: $instagram;
+	margin: 0;
+	padding: 7px 10px;
+	text-align: left;
+}
+
+.card-link > a:hover {
+	background: rgba(237, 192, 24, 0.7);
+}
+
+// 110x34
