@@ -32,7 +32,7 @@ h2 {
 h3 {
   font-family: 'Roboto';
   font-weight: 200;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.2em; }
 
 /*----------------------------*\
 	2. NAVBAR
@@ -228,6 +228,10 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.bio a, .skills a {
+  color: #edc018;
+  border-bottom: 3px solid #edc018; }
 
 .photo {
   background: url("../assets/portrait.jpeg");
