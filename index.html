@@ -7,6 +7,7 @@
 	<title>Rick McGavin | Front End Developer</title>
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="css/portfolio.css">
+	<link rel="stylesheet" href="css/media_queries.css">
  </head>
 <body>
 	<!-- NAV -->
@@ -16,8 +17,17 @@
 			<li class="link"><a href="#projects">PROJECTS</a></li>
 			<li class="link"><a href="#about">ABOUT</a></li>
 			<li class="link"><a href="#contact">CONTACT</a></li>
+			<i class="ion-navicon"></i>
 		</ul>
 	</nav>
+	<div class="mobile-nav">
+			<i class="ion-ios-close-outline"></i>
+		<ul>
+			<li class="mobile-link"><a href="#projects">PROJECTS</a></li>
+			<li class="mobile-link"><a href="#about">ABOUT</a></li>
+			<li class="mobile-link"><a href="#contact">CONTACT</a></li>
+		</ul>
+	</div>
 	<!-- LANDING -->
 	<div id="landing" class="landing">
 		<h1>RICK<i class="fa fa-code" aria-hidden="true"></i>MCGAVIN</h1>
@@ -84,7 +94,7 @@
 	</div>
 	<!-- FOOTER -->
 	<div class="footer">
-		<p>Rick <i class="fa fa-code"></i> McGavin</p>
+		<p>Built with HTML, SCSS, and Vanilla JS by Rick McGavin</p>
 	</div>
 	<script src="js/portfolio.js"></script>
 </body>

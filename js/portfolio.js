@@ -1,5 +1,14 @@
-const button = document.querySelector("button");
+const button = document.querySelector('button');
+const nav = document.querySelector('nav');
+const topOfProj = document.querySelector('#projects').offsetTop;
+const topOfAbout = document.querySelector('#about .photo').offsetTop;
+const topOfContact = document.querySelector('#contact .social').offsetTop;
+const links = document.querySelectorAll('.link');
+const hamburger = document.querySelector('.ion-navicon');
+const closeButton = document.querySelector('.ion-ios-close-outline');
 let row = document.querySelector('.row');
+
+
 
 // array of objects containing the data to build each card quickly
 const projectsObj = [
@@ -77,6 +86,8 @@ function buildCards() {
 	}
 }
 
+
+// functions that will remove and add shadows on the email form button on click
 function buttonDown() {
 	button.style.boxShadow = '0px 0px 0px 0px rgba(0,0,0,0.0)';
 }
@@ -85,8 +96,41 @@ function buttonUp () {
 	button.style.boxShadow = '0px 2px 2px 0px rgba(0,0,0,0.5)';
 }
 
+
+
+// function to fix nav to top of window on scroll
+function fixNav() {
+	if (window.scrollY >= topOfProj) {
+		document.body.classList.add('fix');
+		nav.style.background = '#193549';
+		document.body.style.paddingTop = nav.offsetHeight + 'px';
+		nav.classList.add('box-shadow');
+	} else {
+		document.body.classList.remove('fix');
+		nav.style.background = 'transparent';
+		document.body.style.paddingTop = 0;
+		nav.classList.remove('box-shadow');
+	}
+}
+
+// function to toggle class to make mobile nav open on click
+function toggleMobileNav() {
+	document.querySelector('.mobile-nav').classList.toggle('open');
+}
+
+
+// event listeners for the email form button
 button.addEventListener('mousedown', buttonDown);
 button.addEventListener('mouseup', buttonUp);
+
+// event listener for scroll 
+window.addEventListener('scroll', fixNav);
+
+// event listener for mobile navigation menu
+hamburger.addEventListener('click', toggleMobileNav);
+closeButton.addEventListener('click', toggleMobileNav);
+
+
 
 buildCards();
 
