@@ -13,7 +13,6 @@ $button-hover: #ececec;
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400|Roboto:200,300,400');
 
-
 html {
 	box-sizing: border-box;
 }
@@ -26,10 +25,11 @@ html {
 
 body {
 	margin: 0;
-	background: #517fa4; 
+	background: $wesbos; 
   background: -webkit-linear-gradient(to right, $wesbos, $instagram);
           background: linear-gradient(to right, $wesbos, $instagram);
-font-family: 'Roboto';
+	font-family: 'Roboto';
+	padding: 0;
 }
 
 h1 {
@@ -39,6 +39,7 @@ h1 {
 }
 
 h2 {
+	// border-bottom: 3px solid $accent-color;
 	color: $wesbos;
 	font-family: 'Roboto';
 	font-weight: 400;
@@ -47,23 +48,38 @@ h2 {
 }
 
 h3 {
+	border-bottom: 3px solid $accent-color;
+	display: inline-block;
 	font-family: 'Roboto';
 	font-weight: 200;
 	letter-spacing: 0.1em;
 }
 
 
-
 /*----------------------------*\
 	2. NAVBAR
 \*----------------------------*/
 
-nav {
-	height: 50px;
-	width: 100%;
+.box-shadow {
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+		 -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+					box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);	
 }
 
-ul {
+nav {
+	height: 50px;
+	position: relative;
+	top: 0;
+	transition: all 0.5s;
+	width: 100%;
+	z-index: 1;
+}
+
+body.fix nav {
+	position: fixed;
+}
+
+nav ul {
 	align-items: center;
 	display: flex;
 	font-size: 20px;
@@ -73,18 +89,17 @@ ul {
 	padding: 0 10px;
 }
 
-li {
+nav li {
 	font-family: 'Raleway';
 	list-style:none;
 }
 
-a {
+nav a {
 	text-decoration: none;
 	color: $text-color;
 }
 
 nav .fa {
-	cursor: pointer;
 	color: $accent-color;
 	margin: 0 auto 0 0;
 }
@@ -117,9 +132,66 @@ nav .fa {
 
 a:hover {color: $accent-color;}
 
+.ion-navicon {
+	color: $text-color;
+	cursor: pointer;
+	display: none;
+	font-size: 1.5em;
+	z-index: 2;
+}
 
+.ion-navicon:active {
+	color: $accent-color;
+}
 
+.mobile-nav {
+	background: $wesbos;
+	height: 100vh;
+	width: 20vh;
+	// padding-top: 50px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	transform: translateX(100%);
+	transition: transform 0.6s ease;
+	z-index: 1;
+}
 
+.mobile-nav .ion-ios-close-outline {
+	color: $text-color;
+	cursor: pointer;
+	font-size: 2em;
+	left: 15vh;
+	position: relative;
+	top: 1.5vh;
+	z-index: 1.5;
+}
+
+.mobile-nav ul {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.mobile-nav li {
+	list-style: none;
+}
+
+.mobile-nav a {
+	color: $text-color;
+	text-decoration: none;
+}
+
+.mobile-link {
+	@extend .link;
+	display: inline-block;
+}
+
+.open {
+	transform: translateX(0);
+}
 
 /*----------------------------*\
 	3. LANDING PAGE
@@ -164,6 +236,11 @@ a:hover {color: $accent-color;}
 	text-align: center;
 	margin: 1% 0 3% 0;
 }
+
+.projects h3 {
+	border: none;
+}
+
 .project-container {
 	padding: 3%;
 	margin: 0 auto;
@@ -281,13 +358,15 @@ a:hover {color: $accent-color;}
 .about {
 	@extend .projects;
 	background: $wesbos;
-	// padding-left: 5%;
-	// padding-right: 5%;
 }
 
 .about > h2 {
 	text-align: center;
 	color: $text-color;
+}
+
+.about h3 {
+	border-bottom: 3px solid $accent-color;
 }
 
 .about-container {padding: 3%;}
