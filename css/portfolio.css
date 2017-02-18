@@ -106,16 +106,16 @@ a:hover {
 /*----------------------------*\
 	4. PROJECTS
 \*----------------------------*/
-.projects > h2, .about > h2 {
-  text-align: center;
-  margin: 1% 0 3% 0; }
-
 .projects, .about {
   background: #517fa4;
   color: #f7f7f7;
   min-height: 100vh;
   overflow: auto;
   padding: 20px 10%; }
+
+.projects > h2, .about > h2 {
+  text-align: center;
+  margin: 1% 0 3% 0; }
 
 .project-container {
   padding: 3%;
@@ -222,7 +222,7 @@ a:hover {
   justify-content: space-around; }
 
 .bio, .skills {
-  width: 40%;
+  width: 50%;
   letter-spacing: 0.1em;
   line-height: 1.5em;
   display: flex;
@@ -241,16 +241,100 @@ a:hover {
   width: 150px;
   margin-bottom: 10%; }
 
-.skills > .row {
+.col {
   align-items: center;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 10%;
   width: 100%;
   height: 100%; }
 
-.row > i {
+.col > i {
   font-size: 4em;
+  color: #edc018; }
+
+/*----------------------------*\
+	5. CONTACT
+\*----------------------------*/
+.contact {
+  background: #f7f7f7;
+  color: #193549;
+  min-height: 90vh;
+  padding: 20px 5% 0 5%;
+  text-align: center;
+  width: 100%; }
+
+.contact > h2 {
+  color: #193549;
+  font-weight: 400; }
+
+.contact-container {
+  width: 100%; }
+
+.social {
+  width: 50%; }
+
+.col > a {
+  color: #193549;
+  font-size: 4em; }
+
+.col > a:hover {
+  color: #edc018; }
+
+.email {
+  width: 50%; }
+
+.email h3 {
+  margin-bottom: 0; }
+
+form {
+  padding: 20%;
+  text-align: left; }
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 3px solid #757575;
+  font-size: 14px;
+  margin-bottom: 3%;
+  outline: none;
+  padding: 2%;
+  width: 100%;
+  transition: 0.1s; }
+
+input:focus, textarea:focus {
+  border-bottom: 3px solid #edc018; }
+
+textarea {
+  background: none;
+  border: none;
+  border-bottom: 3px solid #757575;
+  font-size: 14px;
+  height: 205px;
+  margin-top: 3%;
+  outline: none;
+  padding: 2%;
+  transition: 0.1s;
+  width: 100%; }
+
+button {
+  background: #193549;
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  color: #f7f7f7;
+  cursor: pointer;
+  font-size: 16px;
+  height: 35px;
+  margin-top: 3%;
+  outline: none;
+  width: 85px; }
+
+button:hover,
+button:focus {
   color: #edc018; }
 
 /*# sourceMappingURL=portfolio.css.map */

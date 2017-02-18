@@ -1,4 +1,4 @@
-
+const button = document.querySelector("button");
 let row = document.querySelector('.row');
 
 // array of objects containing the data to build each card quickly
@@ -77,11 +77,16 @@ function buildCards() {
 	}
 }
 
-
-
-function init() {
-	buildCards();
+function buttonDown() {
+	button.style.boxShadow = '0px 0px 0px 0px rgba(0,0,0,0.0)';
 }
 
+function buttonUp () {
+	button.style.boxShadow = '0px 2px 2px 0px rgba(0,0,0,0.5)';
+}
 
-init()
+button.addEventListener('mousedown', buttonDown);
+button.addEventListener('mouseup', buttonUp);
+
+buildCards();
+
