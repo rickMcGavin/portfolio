@@ -23,9 +23,9 @@ h1 {
   margin: 0; }
 
 h2 {
-  color: #f7f7f7;
+  color: #193549;
   font-family: 'Roboto';
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.1em;
   margin: 0; }
 
@@ -100,6 +100,10 @@ a:hover {
   justify-content: center;
   text-align: center; }
 
+.landing h2 {
+  color: #f7f7f7;
+  font-weight: 200; }
+
 .landing .fa {
   color: #edc018; }
 
@@ -107,8 +111,8 @@ a:hover {
 	4. PROJECTS
 \*----------------------------*/
 .projects, .about {
-  background: #517fa4;
-  color: #f7f7f7;
+  background: #f7f7f7;
+  color: #193549;
   min-height: 100vh;
   overflow: auto;
   padding: 20px 10%; }
@@ -213,7 +217,8 @@ a:hover {
   background: #193549; }
 
 .about > h2 {
-  text-align: center; }
+  text-align: center;
+  color: #f7f7f7; }
 
 .about-container {
   padding: 3%; }
@@ -222,12 +227,13 @@ a:hover {
   justify-content: space-around; }
 
 .bio, .skills {
-  width: 50%;
+  align-items: center;
+  display: flex;
+  color: #f7f7f7;
+  flex-direction: column;
   letter-spacing: 0.1em;
   line-height: 1.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  width: 50%; }
 
 .bio a, .skills a {
   color: #edc018;
@@ -336,5 +342,17 @@ button {
 button:hover,
 button:focus {
   color: #edc018; }
+
+/*----------------------------*\
+	6. FOOTER
+\*----------------------------*/
+.footer {
+  align-items: center;
+  background: #193549;
+  color: #f7f7f7;
+  display: flex;
+  font-weight: 300;
+  height: 10vh;
+  justify-content: center; }
 
 /*# sourceMappingURL=portfolio.css.map */
