@@ -49,7 +49,7 @@ h2 {
 h3 {
 	font-family: 'Roboto';
 	font-weight: 200;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.1em;
 }
 
 
@@ -139,7 +139,7 @@ a:hover {color: $accent-color;}
 	font-weight: 200;
 }
 
-.landing .fa {
+.fa-code {
 	color: $accent-color;
 }
 
@@ -183,18 +183,21 @@ a:hover {color: $accent-color;}
           box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.5);
 	display: inline-block;
 	margin: 1% 1%;
-  width: 450px;
+  width: 300px;
   min-height: 300px;
 }
 
 .card-splash {
   align-items: flex-end;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   min-height: 200px;
   padding: 0 5px;
+}
+
+.card-splash h3 {
+	color: $text-color;
 }
 
 .card-description {
@@ -204,11 +207,6 @@ a:hover {color: $accent-color;}
   min-height: 60px;
   padding: 10px;
   text-align: left;
-}
-
-.card-description .fa-code {
-	color: $instagram;
-	font-weight: bolder;
 }
 
 .card-link {
@@ -222,7 +220,7 @@ a:hover {color: $accent-color;}
 .card-link > a {
 	background: $card-background;
 	border-radius: 2px;
-	color: $instagram;
+	color: $wesbos;
 	margin: 0;
 	padding: 7px 10px;
 	text-align: left;
@@ -232,17 +230,15 @@ a:hover {color: $accent-color;}
 	background: rgba(237, 192, 24, 0.7);
 }
 
-.cover {
-	background-size: cover;
-}
-
 .bobby {
-	background: url('../assets/bobby.png');
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),url('../assets/pawn-bobby.jpg');
+	background-position: center;
 	background-size: cover;
 }
 
 .quote {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('../assets/random.png');
+	background-position: center;
 	background-size: cover;
 }
 
@@ -253,11 +249,13 @@ a:hover {color: $accent-color;}
 
 .calc {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('../assets/calc.png');
+	background-position: center;
 	background-size: cover;	
 }
 
 .pomo {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('../assets/pomo.png');
+	background-position: center;
 	background-size: cover;	
 }
 
@@ -268,6 +266,7 @@ a:hover {color: $accent-color;}
 
 .simon {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('../assets/simon.png');
+	background-position: center;
 	background-size: cover;	
 }
 

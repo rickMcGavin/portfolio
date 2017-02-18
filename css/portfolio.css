@@ -32,7 +32,7 @@ h2 {
 h3 {
   font-family: 'Roboto';
   font-weight: 200;
-  letter-spacing: 0.2em; }
+  letter-spacing: 0.1em; }
 
 /*----------------------------*\
 	2. NAVBAR
@@ -104,7 +104,7 @@ a:hover {
   color: #f7f7f7;
   font-weight: 200; }
 
-.landing .fa {
+.fa-code {
   color: #edc018; }
 
 /*----------------------------*\
@@ -138,7 +138,7 @@ a:hover {
   box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.5);
   display: inline-block;
   margin: 1% 1%;
-  width: 450px;
+  width: 300px;
   min-height: 300px; }
 
 .card-splash {
@@ -149,6 +149,9 @@ a:hover {
   min-height: 200px;
   padding: 0 5px; }
 
+.card-splash h3 {
+  color: #f7f7f7; }
+
 .card-description {
   background: #f7f7f7;
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
@@ -156,10 +159,6 @@ a:hover {
   min-height: 60px;
   padding: 10px;
   text-align: left; }
-
-.card-description .fa-code {
-  color: #517fa4;
-  font-weight: bolder; }
 
 .card-link {
   background: #f7f7f7;
@@ -171,7 +170,7 @@ a:hover {
 .card-link > a {
   background: #f7f7f7;
   border-radius: 2px;
-  color: #517fa4;
+  color: #193549;
   margin: 0;
   padding: 7px 10px;
   text-align: left; }
@@ -179,15 +178,14 @@ a:hover {
 .card-link > a:hover {
   background: rgba(237, 192, 24, 0.7); }
 
-.cover {
-  background-size: cover; }
-
 .bobby {
-  background: url("../assets/bobby.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("../assets/pawn-bobby.jpg");
+  background-position: center;
   background-size: cover; }
 
 .quote {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("../assets/random.png");
+  background-position: center;
   background-size: cover; }
 
 .wiki {
@@ -196,10 +194,12 @@ a:hover {
 
 .calc {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("../assets/calc.png");
+  background-position: center;
   background-size: cover; }
 
 .pomo {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("../assets/pomo.png");
+  background-position: center;
   background-size: cover; }
 
 .tictac {
@@ -208,6 +208,7 @@ a:hover {
 
 .simon {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("../assets/simon.png");
+  background-position: center;
   background-size: cover; }
 
 /*----------------------------*\

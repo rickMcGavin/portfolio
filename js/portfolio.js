@@ -5,7 +5,7 @@ let row = document.querySelector('.row');
 const projectsObj = [
 	{
 		title: 'Tribute Page',
-		description: 'This page is a tribute to chess legend: Bobby Fischer.',
+		description: 'This page is a tribute to chess legend, Bobby Fischer.',
 		tools: 'HTML - CSS - Responsive Design',
 		link: 'projects/bobby_fischer/bobby.html',
 		name: 'bobby'
